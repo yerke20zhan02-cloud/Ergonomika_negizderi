@@ -1,0 +1,2 @@
+# Ergonomika_negizderi
+k
