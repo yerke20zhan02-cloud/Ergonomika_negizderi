@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эргономика негіздері: Жұмыс пен денсаулық үйлесімі</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #27ae60;
+            --accent: #e74c3c;
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .term-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .term-card {
+            background: #eef9f2;
+            border-left: 5px solid var(--secondary);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .term-card h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        /* Interactive Tables & Inputs */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        /* Quiz Styles */
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .quiz-option:hover {
+            background: #e2e6ea;
+        }
+
+        .quiz-option input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #219150;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .important-note {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Эргономика негіздері</h1>
+        <p>Жұмыс пен денсаулық үйлесімі — Интерактивті оқу курсы</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Негізгі терминдер -->
+        <section class="card">
+            <h2>1. Негізгі терминдер</h2>
+            <p><strong>Эргономика</strong> — адамның жұмыс ортасымен өзара әрекеттесуін зерттейтін ғылым.</p>
+            <div class="term-grid">
+                <div class="term-card">
+                    <h3>Постура</h3>
+                    <p>Жұмыс кезіндегі дененің қалыпты жағдайы.</p>
+                </div>
+                <div class="term-card">
+                    <h3>Когнитивті</h3>
+                    <p>Адамның қабылдауы, есте сақтауы және ойлау процестеріне қатысты.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Теориялық материал -->
+        <section class="card">
+            <h2>2. Эргономиканың бағыттары мен мақсаты</h2>
+            <p>Эргономиканың басты мақсаты — жұмыс орнын адамның дене бітіміне, психологиясына және мүмкіндіктеріне сәйкес бейімдеу. Оның <strong>3 негізгі мақсаты</strong> бар:</p>
+            <ul>
+                <li>Қауіпсіздікті қамтамасыз ету</li>
+                <li>Жайлылықты арттыру</li>
+                <li>Өнімділікті жоғарылату</li>
+            </ul>
+
+            <h3>Эргономика бағыттары:</h3>
+            <p><strong>Физикалық:</strong> Дене қозғалысын, отыру қалпын (постура) зерттейді. Арқа мен мойын ауруының алдын алу үшін үстел мен орындықты реттеу маңызды.</p>
+            <p><strong>Когнитивті:</strong> Миға түсетін жүктемені (ақпарат қабылдау, зейін шоғырландыру) қарастырады.</p>
+            <p><strong>Ұйымдастырушылық:</strong> Ұжымдағы қарым-қатынас, топтық жұмыс және жұмыс кестесін оңтайландыруды зерттейді.</p>
+        </section>
+
+        <!-- Интерактивті Тапсырма 1 -->
+        <section class="card">
+            <h2>3. 1-тапсырма: Жұмыс орнын ұйымдастыру</h2>
+            <p>Жұмыс орнындағы элементтерді эргономика талаптарына сай қалай орналастыру керектігін жазып шығыңыз:</p>
+            <table>
+                <tr>
+                    <th>Элемент</th>
+                    <th>Эргономикалық орнату тәсілі</th>
+                </tr>
+                <tr>
+                    <td><strong>Орындық</strong></td>
+                    <td><input type="text" placeholder="Мысалы: Белі бар, биіктігі реттелетін..." id="chair"></td>
+                </tr>
+                <tr>
+                    <td><strong>Монитор (экран)</strong></td>
+                    <td><input type="text" placeholder="Мысалы: Жоғарғы жиегі көз деңгейінде..." id="monitor"></td>
+                </tr>
+                <tr>
+                    <td><strong>Пернетақта</strong></td>
+                    <td><input type="text" placeholder="Мысалы: Қол 90 градус бұрышта..." id="keyboard"></td>
+                </tr>
+                <tr>
+                    <td><strong>Жұмыс үстелі</strong></td>
+                    <td><input type="text" placeholder="Мысалы: Биіктігі сәйкес, кең..." id="desk"></td>
+                </tr>
+            </table>
+            <button class="btn" onclick="saveTask1()">Жауаптарды сақтау</button>
+            <p id="task1-msg" style="color: green; display: none; margin-top: 10px;">Жауаптарыңыз сақталды!</p>
+        </section>
+
+        <!-- Интерактивті Тест -->
+        <section class="card">
+            <h2>4. Білімді тексеру тесті</h2>
+            <form id="quizForm">
+                
+                <!-- 1-сұрақ -->
+                <div style="margin-bottom: 20px;">
+                    <p><strong>1. Эргономика ғылымы нені зерттейді?</strong></p>
+                    <label class="quiz-option"><input type="radio" name="q1" value="A"> А) Ғимараттардың сыртқы архитектуралық дизайнын</label>
+                    <label class="quiz-option"><input type="radio" name="q1" value="B"> В) Тек қана компьютерлік бағдарламалардың құрылымын</label>
+                    <label class="quiz-option"><input type="radio" name="q1" value="C"> С) Адамның жұмыс ортасымен өзара әрекеттесуін және жұмыс тиімділігін</label>
+                    <label class="quiz-option"><input type="radio" name="q1" value="D"> D) Өсімдіктердің өсуіне қажетті жағдайларды</label>
+                </div>
+
+                <!-- 2-сұрақ -->
+                <div style="margin-bottom: 20px;">
+                    <p><strong>2. Адамның миына түсетін жүктемені, ақпаратты қабылдау мен зейін қоюды зерттейтін эргономика түрі:</strong></p>
+                    <label class="quiz-option"><input type="radio" name="q2" value="A"> А) Когнитивті эргономика</label>
+                    <label class="quiz-option"><input type="radio" name="q2" value="B"> В) Биологиялық эргономика</label>
+                    <label class="quiz-option"><input type="radio" name="q2" value="C"> С) Ұйымдастырушылық эргономика</label>
+                    <label class="quiz-option"><input type="radio" name="q2" value="D"> D) Физикалық эргономика</label>
+                </div>
+
+                <!-- 3-сұрақ -->
+                <div style="margin-bottom: 20px;">
+                    <p><strong>3. Эргономиканың үш негізгі мақсатына қайсысы ЖАТПАЙДЫ?</strong></p>
+                    <label class="quiz-option"><input type="radio" name="q3" value="A"> А) Жайлылықты арттыру</label>
+                    <label class="quiz-option"><input type="radio" name="q3" value="B"> В) Қауіпсіздікті қамтамасыз ету</label>
+                    <label class="quiz-option"><input type="radio" name="q3" value="C"> С) Өнімділікті жоғарылату</label>
+                    <label class="quiz-option"><input type="radio" name="q3" value="D"> D) Жұмыс уақытын шексіз ұзарту</label>
+                </div>
+
+                <!-- Open Question 1 -->
+                <div style="margin-bottom: 20px;">
+                    <p><strong>4. Оқушының арқасы мен мойны ауырмауы үшін Физикалық эргономика тұрғысынан 2 шешім ұсыныңыз:</strong></p>
+                    <textarea id="q4" rows="3" placeholder="Шешімдеріңізді жазыңыз..."></textarea>
+                </div>
+
+                <button type="button" class="btn" onclick="checkQuiz()">Тестті тапсыру</button>
+            </form>
+
+            <div id="quizResult" class="feedback"></div>
+        </section>
+
+        <div class="important-note">
+            <strong>Есіңізде сақтаңыз!</strong><br>
+            Дұрыс емес постура (отыру қалпы) арқа мен мойынның ауруына әкелуі мүмкін. Эргономикалық жұмыс орны сіздің аз шаршауыңызға және қателіктерді аз жіберуіңізге көмектеседі.
+        </div>
+
+    </div>
+
+    <script>
+        function saveTask1() {
+            const chair = document.getElementById('chair').value;
+            const monitor = document.getElementById('monitor').value;
+            
+            if(chair || monitor) {
+                document.getElementById('task1-msg').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('task1-msg').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Өтініш, өрістерді толтырыңыз!');
+            }
+        }
+
+        function checkQuiz() {
+            let score = 0;
+            const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+            const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+            const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+            const q4 = document.getElementById('q4').value.trim();
+
+            if (!q1 || !q2 || !q3) {
+                alert('Өтініш, барлық тест сұрақтарына жауап беріңіз!');
+                return;
+            }
+
+            if (q1 === 'C') score++;
+            if (q2 === 'A') score++;
+            if (q3 === 'D') score++;
+
+            const resultDiv = document.getElementById('quizResult');
+            resultDiv.style.display = 'block';
+            
+            let resultHTML = `<h3>Нәтиже: ${score} / 3 тест ұпайы</h3>`;
+            
+            if (q4.length > 5) {
+                resultHTML += `<p><strong>4-сұрақ бойынша ұсыныс сақталды:</strong> "${q4}"</p>`;
+                resultHTML += `<p style="color: #555;"><i>Үлгілік дұрыс жауап: 1) Мониторды көз деңгейіне қою; 2) Бел тірегі бар эргономикалық орындық пайдалану.</i></p>`;
+            } else {
+                resultHTML += `<p style="color: red;">4-сұраққа толық жауап жазбадыңыз.</p>`;
+            }
+
+            if (score === 3) {
+                resultDiv.className = 'feedback correct';
+                resultHTML += `<p>Өте жақсы! Тақырыпты толық меңгердіңіз.</p>`;
+            } else {
+                resultDiv.className = 'feedback incorrect';
+                resultHTML += `<p>Кейбір сұрақтардан қателестіңіз. Материалды қайта оқып шығуды ұсынамыз.</p>`;
+            }
+
+            resultDiv.innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>
